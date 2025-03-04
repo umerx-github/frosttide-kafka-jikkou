@@ -10,7 +10,7 @@
     },
 	// Use /frosttide-kafka-jikkou as the bind mount and workspace
 	"workspaceMount": "source=${localWorkspaceFolder},target=/frosttide-kafka-jikkou,type=bind",
-	"workspaceFolder": "/frosttide-kafka-jikkou"
+	"workspaceFolder": "/frosttide-kafka-jikkou",
 	// Use an env file
 	// "runArgs": [
 	// 	"--env-file",
