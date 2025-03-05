@@ -1,0 +1,20 @@
+apiVersion: "kafka.jikkou.io/v1beta2"
+kind: "KafkaTopicList"
+items:
+  - metadata:
+      name: "my-first-topic"
+    spec:
+      partitions: 5
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "compact"
+
+  - metadata:
+      name: "my-second-topic"
+      annotations:
+        jikkou.io/delete: true
+    spec:
+      partitions: 4
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "delete"

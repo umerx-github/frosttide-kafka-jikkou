@@ -1,4 +1,6 @@
 FROM streamthoughts/jikkou:latest AS base
+ENV JIKKOU_CONTEXT_NAME="mycontext"
+ENV JIKKOU_CONFIG_KAFKA_CLIENT_BOOSTRAP_SERVERS="broker:9092"
 USER root
 RUN ln -s /app/jikkou /usr/local/bin/jikkou
 RUN apk add --no-cache bash sudo
