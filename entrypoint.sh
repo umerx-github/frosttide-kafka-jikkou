@@ -12,4 +12,10 @@ sudo jikkou config set-context "${JIKKOU_CONTEXT_NAME}" --config-props=kafka.cli
 #   }
 # }
 # EOF
+echo "Checking if Kafka is ready..."
+until jikkou health get kafka 1>/dev/null 2>&1; do
+    echo "Waiting for Kafka to be ready..."
+    sleep 1
+done
+
 jikkou apply -f ./kafka-topics.yml
