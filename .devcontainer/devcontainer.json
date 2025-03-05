@@ -21,7 +21,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash entrypoint.sh",
+	"postCreateCommand": "bash ./src/entrypoint.sh",
 	// Configure tool-specific properties.
 	"runArgs": ["--network=kafka_external"],
 	"customizations": {
