@@ -1,8 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
+	"name": "frosttide-kafka-jikkou",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"initializeCommand": "docker network create kafka_external || true",
 	"build": {
         "dockerfile": "../Dockerfile",
         // Update 'VARIANT' to pick a Node.js version: 16, 14, 12
