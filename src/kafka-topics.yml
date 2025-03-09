@@ -18,3 +18,19 @@ items:
       replicationFactor: 1
       configs:
         cleanup.policy: "delete"
+
+  - metadata:
+      name: "finnhub-websocket-trades-event-processor-input"
+    spec:
+      partitions: 1
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "compact"
+
+  - metadata:
+      name: "finnhub-websocket-trades-event-processor-output"
+    spec:
+      partitions: 1
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "compact"
