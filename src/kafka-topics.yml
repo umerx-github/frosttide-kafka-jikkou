@@ -20,6 +20,14 @@ items:
         cleanup.policy: "delete"
 
   - metadata:
+      name: "frosttide-command-service-output"
+    spec:
+      partitions: 1
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "compact"
+
+  - metadata:
       name: "finnhub-websocket-trades-event-processor-input"
     spec:
       partitions: 1
