@@ -42,3 +42,19 @@ items:
       replicationFactor: 1
       configs:
         cleanup.policy: "compact"
+
+  - metadata:
+      name: "frosttide-broker-account-input"
+    spec:
+      partitions: 1
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "compact"
+
+  - metadata:
+      name: "frosttide-broker-account-output"
+    spec:
+      partitions: 1
+      replicationFactor: 1
+      configs:
+        cleanup.policy: "compact"
